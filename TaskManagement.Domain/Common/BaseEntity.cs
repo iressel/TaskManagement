@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace TaskManagement.Infrastructure.Context.Entities
+namespace TaskManagement.Domain.Common
 {
     /// <summary>
-    /// Base class for all entities in the database
+    /// Base class for all entities database
     /// </summary>
     public class BaseEntity
     {
@@ -20,19 +20,19 @@ namespace TaskManagement.Infrastructure.Context.Entities
         public string? CreatedBy { get; set; }
 
         [Required]
-        [Column("creationdate")]
-        public DateTime? CreationDate { get; set; }
+        [Column("createddate")]
+        public DateTime? CreatedDate { get; set; }
 
         [Required]
         [Column("updatedby", TypeName = "varchar(100)")]
         public string? UpdatedBy { get; set; }
 
         [Required]
-        [Column("updatedate")]
-        public DateTime? UpdateDate { get; set; }
+        [Column("updateddate")]
+        public DateTime? UpdatedDate { get; set; }
 
         [Required]
-        [Column("flgdeleted", TypeName = "varchar(1)")]
-        public string? FlgDeleted { get; set; }
+        [Column("isdeleted", TypeName = "varchar(1)")]
+        public string? IsDeleted { get; set; }
     }
 }
