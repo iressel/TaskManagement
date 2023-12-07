@@ -9,9 +9,9 @@ using TaskManagement.Infrastructure.Interfaces;
 
 namespace TaskManagement.Infrastructure.Repositories
 {
-    public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
+    public class EmployeesRepository : Repository<Employee>, IEmployeesRepository
     {
-        public EmployeeRepository(TaskManagementDbContext context) : base(context)
+        public EmployeesRepository(TaskManagementDbContext context) : base(context)
         {
 
         }

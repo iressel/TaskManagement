@@ -11,10 +11,10 @@ namespace TaskManagement.Api.Extensions
         public static void AddApplicationServices(this IServiceCollection services) 
         {
             //REPOSITORIES
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IEmployeesRepository, EmployeesRepository>();
 
             //SERVICES
-            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IEmployeesService, EmployeesService>();
 
 
             services.AddLogging();

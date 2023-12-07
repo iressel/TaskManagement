@@ -10,12 +10,12 @@ using TaskManagement.Services.Interfaces;
 
 namespace TaskManagement.Services.Services
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeesService : IEmployeesService
     {
         private readonly IMapper _mapper;
-        private readonly IEmployeeRepository _employeeRepository;
+        private readonly IEmployeesRepository _employeeRepository;
 
-        public EmployeeService(IMapper mapper, IEmployeeRepository employeeRepository)
+        public EmployeesService(IMapper mapper, IEmployeesRepository employeeRepository)
         {
             _mapper = mapper;
             _employeeRepository = employeeRepository;

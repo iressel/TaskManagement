@@ -2,7 +2,7 @@
 
 namespace TaskManagement.Services.Interfaces
 {
-    public interface IEmployeeService
+    public interface IEmployeesService
     {
         Task<IEnumerable<EmployeeDto>> GetAllEmployeesAsync();
         Task<EmployeeDto?> GetEmployeeByIdAsync(Guid id);
