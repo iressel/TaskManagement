@@ -17,7 +17,7 @@ namespace TaskManagement.Domain.Aggregates.PersonAggregate
         public string? Name { get; set; }
 
         [Column(TypeName = "varchar(150)")]
-        public string? Surname { get; set; }
+        public string? Lastname { get; set; }
 
         [Column(TypeName = "varchar(20)")]
         public string? Legajo { get; set; }
@@ -38,7 +38,7 @@ namespace TaskManagement.Domain.Aggregates.PersonAggregate
         [Column(TypeName = "varchar(20)")]
         public string? CellPhone { get; set; }
 
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "varchar(100)")]
         public string? Email { get; set; }
 
         public DateTime? EnrollmentDate { get; set; }

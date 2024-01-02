@@ -1,4 +1,5 @@
-﻿using TaskManagement.Domain.Common;
+﻿using TaskManagement.Domain.Aggregates.DepartmentAggregate;
+using TaskManagement.Domain.Common;
 
 namespace TaskManagement.Domain.Aggregates.PersonAggregate
 {
@@ -14,7 +15,7 @@ namespace TaskManagement.Domain.Aggregates.PersonAggregate
 
         public string? AddressNumber { get; set; }
 
-        public string? IsOnTheGroundFloor { get; set; }
+        public bool? IsOnTheGroundFloor { get; set; }
 
         public string? DepartmentNumber { get; set; }
 
@@ -23,5 +24,10 @@ namespace TaskManagement.Domain.Aggregates.PersonAggregate
         public string? ZipCode { get; set; }
 
         public string? DetailedAddress { get; set; }
+
+        #region Inverse Navigation Properties
+        public Guid EmployeeId { get; set; } // Required foreign key property
+        public Employee Employee { get; set; } = null!; // Required reference navigation to principal
+        #endregion
     }
 }

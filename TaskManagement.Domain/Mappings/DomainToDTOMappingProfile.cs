@@ -16,7 +16,7 @@ namespace TaskManagement.Domain.Mappings
             CreateMap<Employee, EmployeeDto>()
                 .ForMember(dest => dest.Addresses, m => m.MapFrom(source => source.Addresses))
                 .ForMember(dest => dest.Department, m => m.MapFrom(source => source.Department))
-                .ForMember(dest => dest.Tasks, m => m.MapFrom(source => source.Tasks));//.ReverseMap();
+                .ForMember(dest => dest.Tasks, m => m.MapFrom(source => source.Tickets));//.ReverseMap();
         }
     }
 }

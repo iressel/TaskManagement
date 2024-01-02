@@ -11,6 +11,8 @@ namespace TaskManagement.Domain.Common
         public BaseEntity()
         {
             Id = Guid.NewGuid();
+            CreatedDate = DateTime.Now;
+            IsDeleted = "0";
         }
 
         public Guid Id { get; set; }

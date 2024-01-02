@@ -16,7 +16,7 @@ namespace TaskManagement.Api.Extensions
                     options.UseSqlServer(
                         connectionString,
                         dbOptions => dbOptions.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)
-                                              .MigrationsAssembly("TaskManagement.Infraestructure"));
+                                              .MigrationsAssembly("TaskManagement.Infrastructure"));
                 });
         }
     }
